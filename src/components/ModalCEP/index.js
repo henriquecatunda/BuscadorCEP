@@ -27,9 +27,10 @@ export default function ModalCEP(props) {
   
     }, [cep])   
 
-    const verificarCep = () => {
+    const verificarCep = (cep) => {
 
-      if(cep !== ' ' && cep.length === 8){
+      cep = cep.replace('-', '');
+      if(cep.length !== 0 && cep.length === 8){
         setDeleteAtivity(true);
       }else{
       alert('campo vazio')
@@ -39,7 +40,7 @@ export default function ModalCEP(props) {
 
   return (
     <>
-      <Button title="Buscar" onClick={(a) => verificarCep() }/>
+      <Button title="Buscar" onClick={(a) => verificarCep(cep) }/>
 
       <Modal show={deleteAtivity} onHide={() => setDeleteAtivity(false)}>
 
