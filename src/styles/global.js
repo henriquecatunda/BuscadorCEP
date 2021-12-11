@@ -37,4 +37,8 @@ export default createGlobalStyle`
   .row {
     margin-left: 15px !important;
   }
+
+  .col-sm-12 {
+    margin-top: 10px !important;
+  }
 `

@@ -25,7 +25,7 @@ export default function BuscarCEP() {
 
                 <Card >
 
-                    <Input title="CEP *" value={cep} onChange={(e) => setCep(e.target.value)} required/>
+                    <Input type="number" title="CEP *" value={cep} onChange={(e) => setCep(e.target.value)} required/>
 
                     <BoxButton>
                          <Link to={'/'} style={{ textDecoration: 'none' }} >

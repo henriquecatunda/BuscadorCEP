@@ -29,11 +29,10 @@ export default function ModalCEP(props) {
 
     const verificarCep = (cep) => {
 
-      cep = cep.replace('-', '');
       if(cep.length !== 0 && cep.length === 8){
         setDeleteAtivity(true);
       }else{
-      alert('campo vazio')
+      alert('campo vazio OU somente números')
       }
     }
 

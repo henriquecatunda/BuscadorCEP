@@ -12,9 +12,9 @@ export default function BuscarEndereço() {
 
     const [estado, setEstado] = useState('');
     const [dadosEstado, setDadosEstado] = useState('');
-    const [municipio, setMunicipio] = useState('crateús');
+    const [municipio, setMunicipio] = useState('');
     const [dadosMunicipio, setDadosMunicipio] = useState('');
-    const [logradouro, setLogradouro] = useState('Rua Francisco Maciel Azevedo Melo');
+    const [logradouro, setLogradouro] = useState('');
 
 
     const getEstados = () => {
@@ -42,15 +42,6 @@ export default function BuscarEndereço() {
         getMunicipio();
     
       }, [estado])   
-
-
-    const typeData = [
-        { name: 'PDF',  category: 'pdf' },
-        { name: 'Arquivo',  category: 'file' },
-        { name: 'Descrição',  category: 'text' },
-        { name: 'Link',  category: 'link' },
-      ];
-
 
     return (
 
@@ -91,7 +82,7 @@ export default function BuscarEndereço() {
                         </Form.Select>
                     </Col>
 
-                    <Input title="Logradouro *" value={logradouro} onChange={(e) => setLogradouro(e.target.value)} required />
+                    <Input title="Logradouro" value={logradouro} onChange={(e) => setLogradouro(e.target.value)} />
         
                     <BoxButton>
                         <Link to={'/'} style={{ textDecoration: 'none' }} >

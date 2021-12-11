@@ -25,14 +25,14 @@ export default function BuscarEndereço(props) {
 
      getCEP();
   
-    }, [estado])   
+    }, [estado, municipio, logradouro])   
 
     const verificarCep = () => {
 
-      if(estado.length !== 0  ){
+      if(estado.length !== 0 && municipio.length !== 0  && logradouro.length !== 0){
         setDeleteAtivity(true);
       }else{
-      alert('campo vazio')
+      alert('Informar todos os campos')
       }
     }
 

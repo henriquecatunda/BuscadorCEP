@@ -3,7 +3,7 @@ import { InputBase } from "./styles"
 
 export default function Input(props) {
 
-    const { title, value, onChange } = props;
+    const { title, value, onChange,type } = props;
 
     return (
         <InputBase
@@ -11,6 +11,7 @@ export default function Input(props) {
         value={value}
         onChange={onChange}
         required
+        type={type}
         />
     );
 
