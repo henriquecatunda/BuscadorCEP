@@ -8,7 +8,7 @@ export default function BuscarEndereço(props) {
 
   const {estado, municipio, logradouro} = props;
   
-  const [deleteAtivity, setDeleteAtivity] = useState(false);
+  const [endereçoAtivity, setendereçoAtivity] = useState(false);
   const [dadosCep, setDadosCep] = useState('')
 
   const getCEP = () => {
@@ -30,7 +30,7 @@ export default function BuscarEndereço(props) {
     const verificarCep = () => {
 
       if(estado.length !== 0 && municipio.length !== 0  && logradouro.length !== 0){
-        setDeleteAtivity(true);
+        setendereçoAtivity(true);
       }else{
       alert('Informar todos os campos')
       }
@@ -41,7 +41,7 @@ export default function BuscarEndereço(props) {
     <>
       <Button title="Buscar" onClick={(a) => verificarCep() }/>
 
-      <Modal show={deleteAtivity} onHide={() => setDeleteAtivity(false)}>
+      <Modal show={endereçoAtivity} onHide={() => setendereçoAtivity(false)}>
 
       <Modal.Header>
           <Modal.Title>Resultado-CEP </Modal.Title>
@@ -67,7 +67,7 @@ export default function BuscarEndereço(props) {
       </Modal.Body>
 
       <Modal.Footer>
-          <Button  title="Voltar"   onClick={() => setDeleteAtivity(false)}/>
+          <Button  title="Voltar"   onClick={() => setendereçoAtivity(false)}/>
       </Modal.Footer>
       </Modal>
     </>

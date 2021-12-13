@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Container, Title,BoxButton, Card} from "./styles";
+import React, {  useState } from 'react'
+import { Container,BoxButton, Card} from "./styles";
 import PageDefault from '../../components/PageDefaulf';
 import Button from '../../components/Button';
 import { Link } from 'react-router-dom';

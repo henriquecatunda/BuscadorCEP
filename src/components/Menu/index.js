@@ -1,17 +1,13 @@
 import { Container, Title, Box,MenuTitle } from "./styles"
-import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export default function Menu(props) {
-
-    let location = useLocation();
 
     const { titleMenu, titleCep, titleEnd} = props;
 
     return (
 
         <Container>
-
 
             <Title>
                 {titleMenu}

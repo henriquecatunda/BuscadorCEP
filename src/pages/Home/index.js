@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Container, Title, Description, Box } from "./styles";
 import PageDefault from '../../components/PageDefaulf';
 import Button from '../../components/Button';

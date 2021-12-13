@@ -8,7 +8,7 @@ export default function ModalCEP(props) {
 
   const {cep} = props;
   
-  const [deleteAtivity, setDeleteAtivity] = useState(false);
+  const [cepAtivity, setcepAtivity] = useState(false);
   const [dadosCep, setDadosCep] = useState('')
 
   const getCEP = () => {
@@ -30,7 +30,7 @@ export default function ModalCEP(props) {
     const verificarCep = (cep) => {
 
       if(cep.length !== 0 && cep.length === 8){
-        setDeleteAtivity(true);
+        setcepAtivity(true);
       }else{
       alert('campo vazio OU somente números')
       }
@@ -41,7 +41,7 @@ export default function ModalCEP(props) {
     <>
       <Button title="Buscar" onClick={(a) => verificarCep(cep) }/>
 
-      <Modal show={deleteAtivity} onHide={() => setDeleteAtivity(false)}>
+      <Modal show={cepAtivity} onHide={() => setcepAtivity(false)}>
 
       <Modal.Header>
           <Modal.Title>Resultado-CEP </Modal.Title>
@@ -63,7 +63,7 @@ export default function ModalCEP(props) {
       </Modal.Body>
 
       <Modal.Footer>
-          <Button  title="Voltar"   onClick={() => setDeleteAtivity(false)}/>
+          <Button  title="Voltar"   onClick={() => setcepAtivity(false)}/>
       </Modal.Footer>
       </Modal>
     </>
